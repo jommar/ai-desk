@@ -59,6 +59,23 @@ Claude Code conventions.
   `.claude/` so they work immediately.
 - **Zero build step:** no `npm install`, no dependencies required to use it.
 
+### Security & privacy
+
+- The user's data (`profile/profile.md`, everything in `workspace/`) is private and git-ignored.
+- The assistant **drafts first and asks before acting outward** (send/post/pay/delete/contact).
+- `.claude/settings.json` allows everyday work without prompts, but denies access to credential
+  stores and dangerous write targets, and asks before running shell commands.
+- Full data-handling & permission model: [`docs/security.md`](docs/security.md) and
+  [`SECURITY.md`](SECURITY.md).
+
+### Governance & maintenance
+
+- Contributor workflow and conventions: [`CONTRIBUTING.md`](CONTRIBUTING.md). Architecture:
+  [`docs/architecture.md`](docs/architecture.md). Version history: [`CHANGELOG.md`](CHANGELOG.md) /
+  [`VERSION`](VERSION).
+- Optional, dependency-light health check (mirrors `/checkup`): `bash scripts/validate.sh`. It also
+  runs in CI on pull requests. Neither is required to use AI Desk.
+
 ### Requirements
 
 - Claude Code installed and signed in. Open this folder as the working directory.

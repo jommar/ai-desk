@@ -20,6 +20,8 @@ Last updated: (date)
 - **Business / organization:** (not set)
 - **What it does / who it serves:** (not set)
 - **Size:** (not set)
+- **Team & who I work with:** (not set)  <!-- team, manager, direct reports, key collaborators -->
+- **Industry / regulatory context:** (not set)  <!-- e.g. healthcare, finance, education, public sector -->
 - **Typical week / recurring work:** (not set)
 
 ## Where AI Desk helps most
@@ -58,6 +60,15 @@ Last updated: (date)
 - **Sensitive / off-limits topics or people:** (not set)
 - **Default autonomy:** draft and wait for approval _(default)_ | act on small stuff, check in on
   big stuff
+
+## Compliance & data handling
+
+_Optional, but valuable for regulated or team environments. Skip if it doesn't apply._
+
+- **Confidentiality rules:** (not set)  <!-- e.g. never put client PII in web searches; keep contracts internal -->
+- **Regulatory constraints:** (not set)  <!-- e.g. HIPAA, GDPR, FERPA, SOC 2 obligations -->
+- **Approval / sign-off rules:** (not set)  <!-- e.g. legal must review anything customer-facing -->
+- **Retention / where outputs may live:** (not set)  <!-- e.g. keep in workspace only; don't email drafts externally -->
 
 ## Key context
 

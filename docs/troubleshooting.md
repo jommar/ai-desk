@@ -34,6 +34,19 @@ and the size of `CLAUDE.md`, and repairs what it can. See `maintenance.md` and `
 That violates the size budget. Move the detail into an appropriate doc and leave only a pointer in
 `CLAUDE.md`. See `self-healing.md`.
 
+## "It asked permission to run a command"
+
+That's on purpose. AI Desk lets everyday actions (reading, drafting, searching) run smoothly, but it
+**asks before running any command on your computer** — the highest-risk kind of action. If a prompt
+appears and you're not sure, it's always safe to say no and ask what it's for. The full posture is in
+`security.md`.
+
+## "Is my personal information safe?"
+
+Yes — your profile and everything in `workspace/` stay on your machine and out of version control,
+and AI Desk never sends anything outward without your OK. The details, in plain terms, are in
+`how-it-works.md` ("The safety promise"); the operator version is in `security.md`.
+
 ## "I want to start over"
 
 Re-run `init` to rebuild the profile. To reset outputs, clear `workspace/` (their files) — but always

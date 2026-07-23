@@ -34,6 +34,9 @@ actually work. Answer what you like, skip anything you don't. Ready?"_
 - What do you do? (role / title)
 - Tell me about your business or organization — name, what it does, who it serves.
 - How big is it? (just you / small team / larger)
+- Who do you work with day to day? (team, manager, key collaborators) _(optional)_
+- Are you in a regulated or sensitive industry? (healthcare, finance, education, public sector…)
+  _(optional — helps me respect the right boundaries)_
 - What does a typical week look like — the recurring things you do?
 
 ### 3. Where AI Desk can help most
@@ -67,6 +70,9 @@ actually work. Answer what you like, skip anything you don't. Ready?"_
 - Anything sensitive I should avoid, or topics/people that are off-limits?
 - In general, do you prefer I **draft and wait for your OK** on everything, or **act on the small
   stuff** and check in on the big stuff? _(Default: draft and wait.)_
+- _(If regulated/team context above)_ Any rules about confidential data, approvals/sign-off, or where
+  work is allowed to live? (e.g. "keep client PII out of web searches," "legal reviews anything
+  customer-facing," "outputs stay in the workspace"). Save these to *Compliance & data handling*.
 
 ### 7. Key context (optional but powerful)
 

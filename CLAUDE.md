@@ -35,6 +35,8 @@ may not be technical.
 | Create a NEW assistant or tool ("I wish it could…")     | `docs/builder/build-guide.md`        |
 | Understand agents vs skills vs commands                 | `docs/building-blocks.md`            |
 | Fix something that seems broken or confusing            | `docs/troubleshooting.md`            |
+| Understand privacy, data handling, or permissions       | `docs/security.md`                   |
+| Understand how AI Desk is built (operator)              | `docs/architecture.md`               |
 | Do repo housekeeping / health check                     | `docs/maintenance.md` → run `/checkup` |
 
 A full map of every document lives in `docs/index.md`. When unsure which doc applies, read

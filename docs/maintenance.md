@@ -37,7 +37,16 @@ work.
 `workspace/` is the user's. Don't prune it automatically. If it's getting cluttered, you may *offer*
 to organize it into subfolders (e.g. by month or project), but only act with a clear yes.
 
+## Optional deterministic check
+
+`/checkup` is the conversational health pass. Operators who want a scriptable, model-free version can
+run `bash scripts/validate.sh`, which checks the same self-healing invariants (CLAUDE.md size, index
+and catalog in sync, frontmatter, valid settings, resolving links) and exits non-zero on failure. CI
+runs it on pull requests. It's a convenience, never a requirement.
+
 ## Deliberately no build step
 
-AI Desk has no compiler, package manager, or CI to maintain. If an advanced operator wants linting or
-git hooks, that's optional and lives in their own config — the product must keep working without it.
+AI Desk has no compiler, package manager, or required CI. The optional `scripts/validate.sh` and the
+GitHub Actions workflow are conveniences for operators; the product must keep working without them.
+If an advanced operator wants linting or git hooks, that's their own config — end users need none of
+it.

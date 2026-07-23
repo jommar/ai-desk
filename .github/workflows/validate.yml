@@ -1,0 +1,16 @@
+# Optional CI — runs the self-healing invariant checks on pull requests.
+# AI Desk is zero-install; this workflow is a convenience, not a requirement.
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run validation
+        run: bash scripts/validate.sh

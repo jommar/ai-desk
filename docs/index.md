@@ -16,6 +16,13 @@ list (see `self-healing.md`).
 | `glossary.md`           | Plain-language definitions of any term a user might not know            |
 | `troubleshooting.md`    | Common problems and how to fix them                                     |
 
+## For operators (running & securing AI Desk)
+
+| Doc                | What it covers                                                              |
+| ------------------ | --------------------------------------------------------------------------- |
+| `architecture.md`  | How AI Desk is built: the router + second-brain design and the directory contract |
+| `security.md`      | Security, privacy, data handling, and the permission posture                |
+
 ## For extending AI Desk (it builds itself)
 
 | Doc                          | What it covers                                                     |

@@ -11,6 +11,13 @@ workspace/*
 .claude/settings.local.json
 .claude/*.local.json
 
+# Secrets — never commit these (defense-in-depth; also denied in settings.json).
+.env
+.env.*
+*.pem
+*.key
+credentials
+
 # OS / editor noise.
 .DS_Store
 Thumbs.db

@@ -1,0 +1,38 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "permission": {
+    "read": {
+      "*": "allow",
+      "~/.ssh/**": "deny",
+      "~/.aws/**": "deny",
+      "~/.config/gcloud/**": "deny",
+      "~/.config/gh/**": "deny",
+      "~/.gnupg/**": "deny",
+      "~/.kube/**": "deny",
+      "~/.docker/config.json": "deny",
+      "~/.npmrc": "deny",
+      "~/.netrc": "deny",
+      "**/.env": "deny",
+      "**/.env.*": "deny",
+      "**/*.pem": "deny",
+      "**/*.key": "deny",
+      "**/id_rsa": "deny",
+      "**/id_ed25519": "deny",
+      "**/credentials": "deny"
+    },
+    "edit": {
+      "*": "allow",
+      "~/.ssh/**": "deny",
+      "~/.bashrc": "deny",
+      "~/.zshrc": "deny",
+      "~/.profile": "deny",
+      "~/.bash_profile": "deny",
+      "**/.git/**": "deny"
+    },
+    "glob": "allow",
+    "grep": "allow",
+    "webfetch": "allow",
+    "websearch": "allow",
+    "bash": "ask"
+  }
+}

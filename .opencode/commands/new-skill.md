@@ -1,0 +1,12 @@
+---
+description: Build a new quick tool (skill) for a repeatable job
+---
+
+The user wants a new quick tool. Follow `docs/builder/build-guide.md`, treating this as a **skill**
+build (but confirm skill-vs-agent in Phase 0 — if it needs judgment mid-way, switch to an agent).
+
+Work through the phases conversationally and in plain language. When you build, write the tool to
+`.opencode/skills/<name>/SKILL.md` in the exact format from the build guide, then register it in
+`docs/catalog.md` and run the self-heal check.
+
+What the user wants the tool to do: $ARGUMENTS

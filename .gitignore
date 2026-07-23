@@ -1,0 +1,22 @@
+# AI Desk — keep the user's private data out of version control.
+
+# The user's saved profile (personal/business data).
+profile/profile.md
+
+# Everything the user produces or drops in to work on.
+workspace/*
+!workspace/README.md
+
+# Local Claude Code state and any machine-specific settings.
+.claude/settings.local.json
+.claude/*.local.json
+
+# OS / editor noise.
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+
+# Node (only if an advanced user adds tooling later).
+node_modules/

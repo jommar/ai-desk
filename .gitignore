@@ -27,3 +27,8 @@ Thumbs.db
 
 # Node (only if an advanced user adds tooling later).
 node_modules/
+
+# OpenCode auto-generated plugin dependencies (managed automatically).
+.opencode/package.json
+.opencode/package-lock.json
+.opencode/.gitignore

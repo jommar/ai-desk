@@ -1,8 +1,8 @@
 # Docs Index — the AI Desk "second brain"
 
-`CLAUDE.md` is deliberately tiny. Everything it needs to know how to behave lives here. This index is
-the source of truth for **what documentation exists**. When you add or rename a doc, update this
-list (see `self-healing.md`).
+`AGENTS.md` (the harness-agnostic router) is deliberately tiny. Everything it needs to know how to
+behave lives here. This index is the source of truth for **what documentation exists**. When you add
+or rename a doc, update this list (see `self-healing.md`).
 
 ## For using AI Desk
 
@@ -21,6 +21,7 @@ list (see `self-healing.md`).
 | Doc                | What it covers                                                              |
 | ------------------ | --------------------------------------------------------------------------- |
 | `architecture.md`  | How AI Desk is built: the router + second-brain design and the directory contract |
+| `harnesses.md`     | How AI Desk runs in any AI tool (Claude Code, opencode, Cursor, Codex, …) and how to add one |
 | `security.md`      | Security, privacy, data handling, and the permission posture                |
 
 ## For extending AI Desk (it builds itself)
@@ -38,7 +39,7 @@ list (see `self-healing.md`).
 
 | Doc                | What it covers                                                              |
 | ------------------ | --------------------------------------------------------------------------- |
-| `self-healing.md`  | Rules that keep `CLAUDE.md` lean and the repo consistent, and how to repair |
+| `self-healing.md`  | Rules that keep `AGENTS.md` lean and the repo consistent, and how to repair |
 | `maintenance.md`   | Routine housekeeping and what `/checkup` does                               |
 
 ## The profile

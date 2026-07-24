@@ -59,5 +59,5 @@ Design outputs so skills can chain: `summarize` → `weekly-planner`, `inbox-tri
 
 ## Where it lives
 
-`.claude/skills/<name>/SKILL.md`, using the format in `build-guide.md`. Add supporting files in the
-same folder if needed (templates, examples) and reference them from `SKILL.md`.
+`skills/<name>/SKILL.md`, using the format in `build-guide.md`. Add supporting files in the same
+folder if needed (templates, examples) and reference them from `SKILL.md`.

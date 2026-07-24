@@ -1,0 +1,19 @@
+# Generated per-harness adapters — produced by scripts/sync-harnesses.py from the single source
+# of truth (AGENTS.md + agents/ + skills/ + commands/). Do not edit these by hand; edit the source
+# and re-run the generator. Marked as generated so GitHub collapses their diffs.
+.claude/agents/**   linguist-generated=true
+.claude/skills/**   linguist-generated=true
+.claude/commands/** linguist-generated=true
+.claude/settings.json   linguist-generated=true
+.opencode/agents/**     linguist-generated=true
+.opencode/commands/**   linguist-generated=true
+.opencode/opencode.json linguist-generated=true
+.agents/skills/**   linguist-generated=true
+.cursor/commands/** linguist-generated=true
+.cursor/permissions.json linguist-generated=true
+.gemini/agents/**   linguist-generated=true
+.gemini/commands/** linguist-generated=true
+.gemini/settings.json   linguist-generated=true
+.codex/agents/**    linguist-generated=true
+.codex/config.toml  linguist-generated=true
+.github/prompts/**  linguist-generated=true

@@ -3,7 +3,8 @@
 The living list of every assistant and quick tool in AI Desk. **Keep this in sync** whenever one is
 added, renamed, or removed (see `self-healing.md`). This is what `/catalog` reads.
 
-> To see the raw definitions: assistants live in `../.claude/agents/`, tools in `../.claude/skills/`.
+> To see the raw definitions: assistants live in `../agents/`, tools in `../skills/`, commands in
+> `../commands/`.
 
 ## Assistants (agents)
 

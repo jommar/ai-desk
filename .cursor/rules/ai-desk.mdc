@@ -1,0 +1,16 @@
+---
+description: AI Desk — harness-agnostic workspace of AI assistants and quick tools. Always follow AGENTS.md.
+alwaysApply: true
+---
+
+# AI Desk
+
+This project is **AI Desk**, a harness-agnostic workspace of AI assistants and quick tools for
+everyday work — no coding required.
+
+**The single source of truth is `AGENTS.md` at the repo root. Read it and follow it** as the full
+project instructions: the start-here behavior, how to use the assistants (`agents/`), quick tools
+(`skills/`), and commands (`commands/`), the routing table to `docs/`, and the golden rules (draft
+first and ask before any outward action; keep `profile/` and `workspace/` private).
+
+@AGENTS.md

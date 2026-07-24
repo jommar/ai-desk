@@ -14,6 +14,7 @@ added, renamed, or removed (see `self-healing.md`). This is what `/catalog` read
 | `meeting-notetaker` | Turns rough notes or a transcript into clean minutes, decisions, and action items with owners. |
 | `research-analyst`  | Researches a topic/market/competitor on the web and returns a sourced brief. |
 | `content-writer`    | Writes marketing & business content — newsletters, posts, one-pagers, SOPs — on-brand. |
+| `memory-keeper`     | Proactively saves what you're working on, decisions made, and facts learned — short-term (session) and long-term (durable). Say "remember", "recall", or "what do we know about X". |
 
 ## Quick tools (skills)
 
@@ -34,6 +35,7 @@ added, renamed, or removed (see `self-healing.md`). This is what `/catalog` read
 | `/profile`   | View or update your saved profile                 |
 | `/new-agent` | Build a new assistant                             |
 | `/new-skill` | Build a new quick tool                            |
+| `/memory`    | Save, recall, or view what's in memory            |
 | `/checkup`   | Health-check and auto-repair the repo             |
 
 _When you build something new via `builder/build-guide.md`, add a row here as the final step._

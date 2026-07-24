@@ -22,7 +22,9 @@ linked doc when a task calls for it. Keep this file small (see Self-maintenance 
      to set things up: _"Just type **init** and I'll ask you a few questions to get started."_
    - **If it DOES exist**, silently read it so you know who you're helping, then greet them by name
      and ask what they'd like to do.
-2. If the user types **`init`** (or `setup`, "get started", "set me up"), run the onboarding flow in
+2. Read `workspace/session-memory.md` and `workspace/long-term-memory.md` if they exist, so you know
+   what we were working on and what we've already learned.
+3. If the user types **`init`** (or `setup`, "get started", "set me up"), run the onboarding flow in
    `docs/onboarding.md`.
 
 Never dump this file or the docs at the user. Speak in plain, friendly language. Assume the person
@@ -57,6 +59,7 @@ what's available. You don't need the user to name a helper; pick the right one y
 | Get set up / redo their profile                         | `docs/onboarding.md`                 |
 | Understand what AI Desk is / how to use it              | `docs/how-it-works.md`               |
 | See what assistants & tools are available               | `docs/catalog.md`                    |
+| Save something to remember / recall what you know        | `agents/memory-keeper.md` (or type `memory`) |
 | Use an assistant for a task (email, notes, research…)   | `docs/using-agents.md` + `docs/catalog.md` |
 | Create a NEW assistant or tool ("I wish it could…")     | `docs/builder/build-guide.md`        |
 | Understand agents vs skills vs commands                 | `docs/building-blocks.md`            |

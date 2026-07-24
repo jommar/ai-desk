@@ -29,6 +29,14 @@ When a helper produces something the user keeps (a draft, a report, a plan), sav
 `workspace/` in a sensible subfolder and tell the user the path. That *is* the memory of the work —
 no database needed.
 
+## The memory-keeper agent
+
+AI Desk ships with a `memory-keeper` agent (`../agents/memory-keeper.md`) that implements this
+pattern. It manages two stores — `workspace/session-memory.md` for the current session and
+`workspace/long-term-memory.md` for durable knowledge — and captures context autonomously, not just
+on explicit "remember" commands. When building a new assistant, prefer delegating memory tasks to it
+rather than rolling your own.
+
 ## Don't over-remember
 
 - Don't stash secrets or sensitive data beyond what the task needs.

@@ -1,0 +1,13 @@
+---
+description: Plain-language guide to what AI Desk can do and how to use it
+---
+
+Give the user a friendly, non-technical overview based on `docs/how-it-works.md`. Keep it short and
+concrete. Then:
+
+1. If no `profile/profile.md` exists, suggest they type `init` first.
+2. Show a few examples of what they can ask for, tailored to their profile if it exists.
+3. Mention the handy shortcuts: `init`, `catalog`, `checkup`.
+4. Offer to start one concrete task right now.
+
+Do not paste raw docs. Speak like a helpful person, not a manual.

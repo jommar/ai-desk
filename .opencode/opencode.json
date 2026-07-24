@@ -27,7 +27,8 @@
       "~/.zshrc": "deny",
       "~/.profile": "deny",
       "~/.bash_profile": "deny",
-      "**/.git/**": "deny"
+      "**/.git/**": "deny",
+      "~/.config/opencode/**": "deny"
     },
     "glob": "allow",
     "grep": "allow",

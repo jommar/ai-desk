@@ -21,18 +21,18 @@ a connection is needed and missing, hand them something they can send themselves
 ## "A helper isn't doing a good job"
 
 - Check the profile is accurate (tone/voice especially).
-- Re-read the helper's definition in `.claude/agents/` or `.claude/skills/`.
+- Re-read the helper's definition in `agents/` or `skills/`.
 - Offer to tune it: adjust its instructions, or rebuild it with `builder/build-guide.md`.
 
 ## "Something seems broken / out of sync"
 
-Run `/checkup`. It validates the profile, the catalog vs. what's actually installed, the docs index,
-and the size of `CLAUDE.md`, and repairs what it can. See `maintenance.md` and `self-healing.md`.
+Run `checkup`. It validates the profile, the catalog vs. what's actually installed, the docs index,
+and the size of `AGENTS.md`, and repairs what it can. See `maintenance.md` and `self-healing.md`.
 
-## "CLAUDE.md is getting long / cluttered"
+## "AGENTS.md is getting long / cluttered"
 
 That violates the size budget. Move the detail into an appropriate doc and leave only a pointer in
-`CLAUDE.md`. See `self-healing.md`.
+`AGENTS.md`. See `self-healing.md`.
 
 ## "It asked permission to run a command"
 

@@ -10,7 +10,7 @@ and go back and forth with you. Good when the work isn't a fixed recipe.
 
 > _"Handle this customer complaint email"_ — it reads, weighs tone, drafts, and adjusts.
 
-Lives in `.claude/agents/<name>.md`.
+Lives in `agents/<name>.md`.
 
 ## Quick tool (a.k.a. "skill")
 
@@ -18,14 +18,14 @@ A small helper that does one well-defined job the same way each time. Fast and p
 
 > _"Proofread this."_ — same reliable procedure every time.
 
-Lives in `.claude/skills/<name>/SKILL.md`.
+Lives in `skills/<name>/SKILL.md`.
 
 ## Command (a shortcut)
 
-A word you type to trigger something instantly, like `init`, `help`, or `/checkup`. Just a
+A word you type to trigger something instantly, like `init`, `help`, or `checkup`. Just a
 convenience layer over the above.
 
-Lives in `.claude/commands/<name>.md`.
+Lives in `commands/<name>.md`.
 
 ## Which do I make?
 

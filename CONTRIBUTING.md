@@ -8,39 +8,48 @@ repo. End users never need it — they just chat with AI Desk.
 
 ## Ground rules
 
-1. **Zero-install stays zero-install.** No required dependencies, build step, or install. Any tooling
-   you add (scripts, CI, editor config) must be optional and must not block end-user usage.
-2. **`CLAUDE.md` is a lean router (≤110 lines).** New knowledge goes in `docs/`, not `CLAUDE.md`. At
-   most, add a one-line pointer. See `docs/self-healing.md`.
-3. **Plain language for users.** User-facing docs, agents, skills, and commands stay warm and
+1. **Zero-install for end users.** Using AI Desk requires no dependencies or build — the per-harness
+   adapters are committed. The one sanctioned contributor step is `python3 scripts/sync-harnesses.py`
+   (stdlib Python 3, no `pip install`); it must never become a prerequisite for *using* the product.
+2. **`AGENTS.md` is a lean router (≤130 lines) and the single source of truth.** New knowledge goes
+   in `docs/`, not `AGENTS.md`. At most, add a one-line pointer. See `docs/self-healing.md`.
+3. **Edit the source, not the generated adapters.** Capabilities live once in `agents/`, `skills/`,
+   `commands/` (+ `AGENTS.md` + the permission posture in the generator). The per-harness dirs
+   (`.claude/`, `.opencode/`, `.cursor/`, `.gemini/`, `.codex/`, `.agents/`, `.github/prompts/`) are
+   **generated** — run `python3 scripts/sync-harnesses.py` after editing a source file, and never
+   hand-edit a generated file. See `docs/harnesses.md`.
+4. **Plain language for users.** User-facing docs, agents, skills, and commands stay warm and
    jargon-free. Operator docs (`docs/architecture.md`, `docs/security.md`, this file) can be more
    technical.
-4. **Safety model is non-negotiable.** Draft first; ask before any outward action (send/post/pay/
+5. **Safety model is non-negotiable.** Draft first; ask before any outward action (send/post/pay/
    delete/contact). See `docs/security.md`.
 
 ## How to add or change a capability
 
-Prefer letting AI Desk build it (`/new-agent`, `/new-skill`, or just describe the need) — it follows
+Prefer letting AI Desk build it (`new-agent`, `new-skill`, or just describe the need) — it follows
 `docs/builder/build-guide.md`. To do it by hand:
 
-- **Agent:** create `.claude/agents/<name>.md` with `name` + `description` frontmatter (optionally
-  `tools`). Format: `docs/builder/build-guide.md`. Design: `docs/builder/agent-design.md`.
-- **Skill:** create `.claude/skills/<name>/SKILL.md` with `name` + `description` frontmatter. Design:
+- **Agent:** create `agents/<name>.md` with `name` + `description` frontmatter (optionally `tools`).
+  Format: `docs/builder/build-guide.md`. Design: `docs/builder/agent-design.md`.
+- **Skill:** create `skills/<name>/SKILL.md` with `name` + `description` frontmatter. Design:
   `docs/builder/skill-design.md`.
-- **Command:** create `.claude/commands/<name>.md` with a `description` in frontmatter.
+- **Command:** create `commands/<name>.md` with a `description` in frontmatter.
 - **Doc:** create `docs/<name>.md` (lowercase-hyphenated).
 
-Naming conventions are in `docs/architecture.md`.
+After adding or changing an agent, skill, command, or the permission posture, run
+`python3 scripts/sync-harnesses.py` to regenerate the per-harness adapters. Naming conventions are in
+`docs/architecture.md`.
 
 ## The self-healing checklist (run on every structural change)
 
 Whenever you add, rename, or remove an agent, skill, command, or doc:
 
 - [ ] `docs/index.md` lists every file in `docs/` (and nothing that no longer exists).
-- [ ] `docs/catalog.md` matches `.claude/agents/`, `.claude/skills/`, and `.claude/commands/`.
+- [ ] `docs/catalog.md` matches `agents/`, `skills/`, and `commands/`.
 - [ ] New/changed agents & skills have valid `name` + `description` frontmatter.
-- [ ] `CLAUDE.md` is still ≤110 lines and all its links resolve.
-- [ ] Ran `/checkup` (conversational) or `bash scripts/validate.sh` (deterministic) — both pass.
+- [ ] `AGENTS.md` is still ≤130 lines and all its links resolve; per-harness pointers stay thin.
+- [ ] Ran `python3 scripts/sync-harnesses.py`; generated adapters are committed and in sync.
+- [ ] Ran `checkup` (conversational) or `bash scripts/validate.sh` (deterministic) — both pass.
 
 ## Optional local checks
 
@@ -61,5 +70,5 @@ bash scripts/validate.sh
 ## Commits & versioning
 
 - Bump `VERSION` and add a `CHANGELOG.md` entry for material changes (architecture, the
-  CLAUDE.md/docs contract, or the shipped set of agents/skills).
+  AGENTS.md/docs contract, or the shipped set of agents/skills).
 - Day-to-day capability additions by end users don't need a version bump — the catalog is the record.

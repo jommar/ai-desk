@@ -17,4 +17,6 @@ If a user runs into a word they don't know, explain it like this.
 - **Autonomy** — how much freedom you give AI Desk to act on its own vs. check with you first.
 - **Catalog** — the list of assistants and tools you currently have.
 - **Checkup** — a self-maintenance pass that keeps everything healthy and consistent.
-- **Claude Code** — the app this runs inside; it's what reads your messages and does the work.
+- **Harness / AI tool** — the app you open AI Desk in and chat with (Claude Code, opencode, Cursor,
+  Gemini CLI, and others). AI Desk works in any of them; it's what reads your messages and does the
+  work.

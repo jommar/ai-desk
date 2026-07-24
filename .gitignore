@@ -7,9 +7,11 @@ profile/profile.md
 workspace/*
 !workspace/README.md
 
-# Local Claude Code state and any machine-specific settings.
+# Local, machine-specific harness state (any AI tool). The shared config is committed;
+# the *.local.json overrides are personal and stay out of git.
 .claude/settings.local.json
 .claude/*.local.json
+.opencode/*.local.json
 
 # Secrets — never commit these (defense-in-depth; also denied in settings.json).
 .env
@@ -28,7 +30,9 @@ Thumbs.db
 # Node (only if an advanced user adds tooling later).
 node_modules/
 
-# OpenCode auto-generated plugin dependencies (managed automatically).
+# opencode auto-generated plugin dependencies, if a plugin is ever added (managed automatically).
+.opencode/node_modules/
 .opencode/package.json
 .opencode/package-lock.json
+.opencode/bun.lock
 .opencode/.gitignore

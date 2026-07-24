@@ -28,19 +28,19 @@
       "Read(**/id_ed25519)",
       "Read(**/credentials)",
       "Write(~/.ssh/**)",
-      "Edit(~/.ssh/**)",
-      "Write(~/.claude/**)",
-      "Edit(~/.claude/**)",
       "Write(~/.bashrc)",
-      "Edit(~/.bashrc)",
       "Write(~/.zshrc)",
-      "Edit(~/.zshrc)",
       "Write(~/.profile)",
-      "Edit(~/.profile)",
       "Write(~/.bash_profile)",
-      "Edit(~/.bash_profile)",
       "Write(**/.git/**)",
-      "Edit(**/.git/**)"
+      "Edit(~/.ssh/**)",
+      "Edit(~/.bashrc)",
+      "Edit(~/.zshrc)",
+      "Edit(~/.profile)",
+      "Edit(~/.bash_profile)",
+      "Edit(**/.git/**)",
+      "Write(~/.claude/**)",
+      "Edit(~/.claude/**)"
     ],
     "ask": [
       "Bash"

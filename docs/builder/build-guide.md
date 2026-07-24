@@ -1,10 +1,11 @@
 # Build Guide — how AI Desk makes new assistants & tools for itself
 
 This is the workflow to follow when a user wants a new capability — whether they say _"build me
-something that…"_, run `/new-agent` / `/new-skill`, or just describe a recurring need. It is adapted
+something that…"_, run `new-agent` / `new-skill`, or just describe a recurring need. It is adapted
 from the agent-builder methodology and tuned for non-technical requesters. The big difference: the
-finished helper is written **straight into `.claude/`** so it works immediately — no separate export
-step.
+finished helper is written **straight into the repo's `agents/`, `skills/`, or `commands/` folder**
+(the single source of truth), then one command (`python3 scripts/sync-harnesses.py`) makes it
+auto-register in every harness. No manual export, no per-tool copying.
 
 ## Golden rule: talk like a person, build like an engineer
 
@@ -62,13 +63,13 @@ Quietly cross-check the design against the reference guides:
 
 Fix issues before building.
 
-### Phase 4 — Build it (write into `.claude/`)
+### Phase 4 — Build it (write into the neutral folders)
 
 Create the file(s) using the exact formats below, then **register it**.
 
-## Output formats (these must be valid Claude Code definitions)
+## Output formats (these must be valid AI Desk definitions)
 
-### A new assistant → `.claude/agents/<name>.md`
+### A new assistant → `agents/<name>.md`
 
 ```markdown
 ---
@@ -102,7 +103,7 @@ Read `profile/profile.md` for tone, voice, names, timezone, and rules. Match the
 - <specific, checkable success criterion>
 ```
 
-### A new quick tool → `.claude/skills/<name>/SKILL.md`
+### A new quick tool → `skills/<name>/SKILL.md`
 
 ```markdown
 ---
@@ -134,9 +135,12 @@ description: <one sentence the model uses to decide when to run this. Include tr
 ## Register it (final step — don't skip)
 
 1. Add a row to `docs/catalog.md` (Assistants or Quick tools table).
-2. If it needs its own shortcut, add `.claude/commands/<name>.md`.
-3. Run the self-heal check (`self-healing.md`) or `/checkup` so everything stays in sync.
-4. Tell the user in plain language what you built and give them one example of how to use it.
+2. If it needs its own shortcut, add `commands/<name>.md`.
+3. **Regenerate the harness adapters** so it auto-registers everywhere: `python3
+   scripts/sync-harnesses.py` (see `harnesses.md`). This is what makes the new helper appear natively
+   in Claude Code, opencode, Cursor, Gemini, Codex, and Copilot.
+4. Run the self-heal check (`self-healing.md`) or `checkup` so everything stays in sync.
+5. Tell the user in plain language what you built and give them one example of how to use it.
 
 ## Keep it simple
 

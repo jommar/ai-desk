@@ -55,8 +55,9 @@ Whatever the level, inherit the user's guardrails from `profile/profile.md`.
 
 ## Tools — give it few, well-described
 
-More tools = more mistakes. Give the minimum. Describe each per `tool-design.md`. In Claude Code,
-omit the `tools:` field to inherit everything, or list a focused set for a tighter, safer assistant.
+More tools = more mistakes. Give the minimum. Describe each per `tool-design.md`. Omit the optional
+`tools:` field to inherit everything the harness offers, or list a focused set for a tighter, safer
+assistant (harnesses that support per-agent tool scoping will honor it; others simply ignore it).
 
 ## Guardrails (always)
 
